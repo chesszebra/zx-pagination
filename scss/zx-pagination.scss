@@ -1,0 +1,59 @@
+.zx-pagination {
+  @include zx-display-flex;
+
+  border-radius: .25rem;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.zx-pagination.zx-no-border {
+  .zx-page-link {
+    border: none;
+  }
+}
+
+.zx-pagination.zx-no-gutter {
+}
+
+.zx-page-link {
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  color: #8b95a5;
+  display: block;
+  font-weight: 400;
+  line-height: 2.3rem;
+  margin: 0 0.25rem;
+  min-width: 2.3rem;
+  padding: 0 8px;
+  position: relative;
+  text-align: center;
+}
+
+.zx-page-item:first-child .zx-page-link {
+  margin-left: 0;
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+}
+
+.zx-page-item.disabled .zx-page-link {
+  color: #868e96;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #ddd;
+}
+
+.zx-page-item.zx-disabled .zx-page-link,
+.zx-page-item.zx-disabled .zx-page-link:focus,
+.zx-page-item.disabled .zx-page-link:hover {
+  opacity: 0.6;
+}
+
+.zx-page-item.zx-active .zx-page-link,
+.zx-page-item.zx-active .zx-page-link:focus,
+.zx-page-item.zx-active .zx-page-link:hover {
+  background-color: #f26444;
+  border-color: #f26444;
+  color: #fff;
+  font-weight: 500;
+}
